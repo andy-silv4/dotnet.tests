@@ -40,7 +40,7 @@ namespace Vaquinha.Unit.Tests.DomainTests
             var valido = pessoa.Valido();
 
             // Assert
-            valido.Should().BeTrue(because: "deve possuir erros de validação");
+            valido.Should().BeFalse(because: "deve possuir erros de validação");
 
             pessoa.ErrorMessages.Should().HaveCount(2, because: "nenhum dos 2 campos obrigatórios foi informado.");
 
